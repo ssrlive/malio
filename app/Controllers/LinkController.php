@@ -567,6 +567,8 @@ class LinkController extends BaseController
             case 'v2rayn':
                 $item['ps'] = $item['remark'];
                 $item['type'] = $item['headerType'];
+                $item['port'] = (string)$item['port'];
+                $item['aid'] = (string)$item['aid'];
                 $return = 'vmess://' . base64_encode(json_encode($item, 320));
                 break;
             case 'kitsunebi':
@@ -686,7 +688,7 @@ class LinkController extends BaseController
             'remark'    => '',
             'type'      => 'vmess',
             'add'       => $baseUrl,
-            'port'      => 10086,
+            'port'      => '10086',
             'id'        => $user->getUuid(),
             'alterId'   => 0,
             'net'       => 'tcp'
@@ -701,7 +703,7 @@ class LinkController extends BaseController
             if (in_array($list, ['kitsunebi', 'quantumult', 'v2rayn'])) {
                 if ($list == 'v2rayn') {
                     unset($Extend_VMess['alterId']);
-                    $Extend_VMess['aid'] = 0;
+                    $Extend_VMess['aid'] = '0';
                 }
                 $out = self::getListItem($Extend_VMess, $list);
             } elseif ($list == 'ssr') {
@@ -957,7 +959,7 @@ class LinkController extends BaseController
                 $Profiles = (string) trim($opts['profiles']);
                 $userapiUrl .= ('&profiles=' . $Profiles);
             } else {
-                $Profiles = '123456'; // 默认策略组
+                $Profiles = 'sspanel'; // 默认策略组123456
             }
             $ProxyGroups = ConfController::getClashConfProxyGroup($Proxys, AppsProfiles::Clash()[$Profiles]['ProxyGroup']);
             $ProxyGroups = ConfController::fixClashProxyGroup($ProxyGroups, AppsProfiles::Clash()[$Profiles]['Checks']);

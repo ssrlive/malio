@@ -365,7 +365,7 @@ class MalioPay extends AbstractPayment
                         exit();
                 }
         
-                http_response_code(200);
+               return http_response_code(200);
             case ('wolfpay'):
                 $type = $args['method'];
                 $settings = Config::get("wolfpay") ['config'];
