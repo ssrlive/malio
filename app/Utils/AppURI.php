@@ -324,9 +324,9 @@ class AppURI
                     }
                 }
                 break;
-            case 'ssr':
-                $return = (URL::getItemUrl($item, 0));
-                break;
+//            case 'ssr':
+//                $return = (URL::getItemUrl($item, 0));
+//                break;
             case 'vmess':
                 if (!in_array($item['net'], ['tcp', 'ws', 'http', 'h2'])) {
                     break;
