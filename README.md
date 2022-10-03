@@ -10,9 +10,9 @@
 由于原开发团队已经放弃Malio主题，因此此项目欢迎各种贡献，包括但不限于改进，新功能，文档和代码改进，问题和错误报告。
 
 ## Wiki
-[详细安装教程](https://github.com/Cadwalader307/Malio-Theme-for-SSPANEL/wiki/%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B)
+[详细安装教程](https://github.com/palaac1/malio-wiki/blob/master/%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.md)
 
-[授权说明](https://gitlab.com/maxitio/malio-theme-for-sspanel/wikis/授权说明)
+[授权说明](https://github.com/palaac1/malio-wiki/blob/master/%E6%8E%88%E6%9D%83%E8%AF%B4%E6%98%8E.md)
 
 ## 注意事项
 .malio_config.php 文件里的商品id必须设置好，不然在商店plans模式下没办法购买。
@@ -26,13 +26,4 @@
 如果需要配置Stripe支付接口的话，请看本仓库的wiki
 
 需要去.config.php打开订阅记录的开关才会记录订阅
-
-## Telegram
-主题交流群 [@章鱼哥的SSPanel之家](https://t.me/woaizyg)
-
-## AFF
-推荐的支付平台👉 [BitPayX](https://wallet.mugglepay.com/?refer=5C59MRKH) ，支持数字货币、支付宝、微信，提款数字货币
-
-## CREDIT
-基于 [Anankke](https://github.com/Anankke)，[galaxyq](https://github.com/galaxychuck)，[dumplin](https://github.com/dumplin233)，[Rin SAMA](https://github.com/mxihan)，[Miku](https://github.com/xcxnig)，[Tony Zou](https://github.com/ZJY2003)，[Nymph](https://github.com/laurieryayoi) 维护的 [SSPanel-Uim](https://github.com/Anankke/SSPanel-Uim) 修改
 
