@@ -10,10 +10,10 @@
     <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg nav-link-user"><i class="fas fa-language" style="vertical-align: -2px; padding-right: 2px;"></i> {if $i18n->lang == 'en'}English{else}简体中文{/if}</a>
       <div class="dropdown-menu dropdown-menu-right">
         <a href="##" class="dropdown-item has-icon" onclick="changeLang('en')">
-           English
+          🇬🇧 English
         </a>
         <a href="##" class="dropdown-item has-icon" onclick="changeLang('zh-cn')">
-           简体中文
+          🇨🇳 简体中文
         </a>
       </div>
     </li>

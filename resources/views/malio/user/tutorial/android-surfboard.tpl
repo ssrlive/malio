@@ -172,7 +172,7 @@
                         <div class="row">
                           <div class="left-text col-xs-12 col-md-6 col-lg-6">
                             <label class="step-no">2.</label>
-                            <p>点击这个按钮 </p>
+                            <p>点击这个按钮 👇👇👇</p>
                             <a href="##" class="btn btn-icon icon-left btn-primary btn-app btn-lg btn-round" onclick="importSublink()"><i class="malio-surfboard"></i> 一键导入 Surfboard 配置</a>
                             <button id="surfboard-qrcode" type="button" class="qrcode-btn btn">
                               <i class="fas fa-qrcode"></i>
@@ -204,7 +204,7 @@
                   </div>
                 </div>
                 <div class="text-center">
-                  <h3 style="margin-top: 50px;margin-bottom: 30px;"></h3>
+                  <h3 style="margin-top: 50px;margin-bottom: 30px;">🤔</h3>
                 </div>
                 <div class="card">
                   <div class="card-body">
@@ -244,8 +244,8 @@
 
   {include file='user/scripts.tpl'}
 
-  <script src="https://fastly.jsdelivr.net/npm/bowser@1.9.4/bowser.min.js"></script>
-  <script src="https://fastly.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bowser@1.9.4/bowser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
 
   <script>
     var appName = "{$config['appName']}";
@@ -253,7 +253,7 @@
       oneclickImport('surfboard', '{$subInfo["surfboard"]}{if $malio_config["enable_sub_extend"] == true}&extend=1{/if}')
     }
     createQRCode('surfboard-download-qrcode', '{$config["baseUrl"]}/client-download/surfboard.apk', '扫描二维码下载客户端')
-    createQRCode('surfboard-qrcode', 'surfboard:///install-config?url=' + encodeURIComponent('{$subInfo["surfboard"]}{if $malio_config["enable_sub_extend"] == true}&extend=1{/if}'), '打开Surfboard Profile 右下角红色添加按钮 Scan qrcode')
+    createQRCode('surfboard-qrcode', 'surfboard:///install-config?url=' + encodeURIComponent('{$subInfo["surfboard"]}{if $malio_config["enable_sub_extend"] == true}&extend=1{/if}'), '打开Surfboard 👉Profile 👉右下角红色添加按钮 👉Scan qrcode')
   </script>
 </body>
 

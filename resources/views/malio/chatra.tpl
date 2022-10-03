@@ -94,7 +94,7 @@
           "retry": "重新连接"
         },
         "smile": {
-          "sorry": "\\_(ツ)_/"
+          "sorry": "¯\\_(ツ)_/¯"
         },
         "error": {
           "weird": "Weird error :-/",

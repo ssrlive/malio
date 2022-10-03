@@ -6,8 +6,8 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
 
 <!-- General CSS Files -->
-<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.8.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.8.2/css/all.min.css">
 
 <!-- Template CSS -->
 <link rel="stylesheet" href="/theme/malio/css/style-{$malio_config['theme_color']}.css">
@@ -41,7 +41,7 @@
     (function () {
         function perfops() {
             var js = document.createElement('script');
-            js.src = 'https://fastly.jsdelivr.net/npm/perfops-rom';
+            js.src = 'https://cdn.jsdelivr.net/npm/perfops-rom';
             document.body.appendChild(js);
         }
         if (document.readyState === 'complete') {
@@ -251,8 +251,8 @@
                     页面修改后再来查看此处。</p>
                   {else}
                   <div id="ss-qr-win"></div>
-                  <p>Windows专用</p>
-                  <p>其他平台扫这个</p>
+                  <p>Windows专用👆</p>
+                  <p>其他平台扫这个👇</p>
                   <div id="ss-qr"></div>
                   {/if}
                 </div>
@@ -400,7 +400,7 @@
 
   {include file='user/scripts.tpl'}
 
-  <script src="https://fastly.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
 
   <script>
     {if URL::SSCanConnect($user, $mu)}

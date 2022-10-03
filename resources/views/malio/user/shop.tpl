@@ -260,7 +260,7 @@
                       {foreach $I18N['plans-info'][$i18n->lang] as $name => $plan}
                       {$price_exploded = explode(".",$plan['price'])}
                       <div id="{$name}" class="color col-12 col-md-2 col-lg-2" onclick="selectItem('plan','{$name}')">
-                        <span class="pricing-inside"><span class="pricing-super"></span>{intval($plan['price'])}<span class="pricing-super">.{if count($price_exploded) == 2}{$price_exploded[1]}{else}0{/if}</span><span class="per-month">/{$i18n->get('mo')}</span></span>
+                        <span class="pricing-inside"><span class="pricing-super">¥</span>{intval($plan['price'])}<span class="pricing-super">.{if count($price_exploded) == 2}{$price_exploded[1]}{else}0{/if}</span><span class="per-month">/{$i18n->get('mo')}</span></span>
                         <span class="badge badge-primary">{$plan['name']}</span>
                       </div>
                       {/foreach}
@@ -371,7 +371,7 @@
                     </div>
                     <div class="invoice-detail-item">
                       <div class="invoice-detail-name">{$i18n->get('pay-with-balance')}</div>
-                      <div id="account-money" class="invoice-detail-value"> -{$user->money}</div>
+                      <div id="account-money" class="invoice-detail-value">¥ -{$user->money}</div>
                     </div>
                     <hr class="mt-2 mb-2">
                     <div class="invoice-detail-item">
@@ -423,7 +423,7 @@
                   </div>
                   <div class="pricing-padding">
                     <div class="pricing-price">
-                      <div>{$shop->price}</div>
+                      <div>¥{$shop->price}</div>
                       <div>{$shop->expire()} {$i18n->get('days')}</div>
                     </div>
                     <div class="pricing-details">
@@ -476,7 +476,7 @@
   </div>
 
   {include file='user/scripts.tpl'}
-  <script src="https://fastly.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
 
   {if $malio_config['shop_style'] == 'plans'}
   <script>

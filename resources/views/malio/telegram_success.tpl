@@ -205,7 +205,7 @@
         <div class="empty-action">
         </div>
         <footer class="section section-footer">
-            <div id="copyright" class="grid-footer container grid-lg">
+            <div id="copyright" class="grid-footer container grid-lg">©
                 <span year="">{date("Y")}</span>
                 <a href="{$config["baseUrl"]}" target="_blank">{$config["appName"]}</a>
             </div>
