@@ -8,13 +8,13 @@
   <title>{$config['appName']}</title>
   <link rel="shortcut icon" href="/">
   <link rel="stylesheet" href="/theme/malio/index/css/prism.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.8.2/css/all.min.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.8.2/css/all.min.css">
   <link rel="stylesheet" href="/theme/malio/index/css/chocolat.css">
   <link rel="stylesheet" href="/theme/malio/index/css/style.css">
   <link rel="stylesheet" href="/theme/malio/index/css/custom.css">
   <link rel="stylesheet" href="/theme/malio/index/landing/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@4.5.0/dist/css/swiper.min.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/swiper@4.5.0/dist/css/swiper.min.css">
 
   {if $malio_config['enable_crisp'] == true && $malio_config['enable_crisp_outside'] == true}
   {include file='crisp.tpl'}
@@ -517,7 +517,7 @@
 
 
   <!--End mc_embed_signup-->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@4.5.0/dist/js/swiper.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/swiper@4.5.0/dist/js/swiper.min.js"></script>
 
   <script>
     var mySwiper = new Swiper('.swiper-container', {

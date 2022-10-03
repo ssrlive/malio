@@ -256,8 +256,8 @@
 
   {include file='user/scripts.tpl'}
 
-  <script src="https://cdn.jsdelivr.net/npm/bowser@1.9.4/bowser.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/bowser@1.9.4/bowser.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
 
   <script>
     function importSublink(client) {
