@@ -173,7 +173,7 @@
                         <div class="row">
                           <div class="left-text col-xs-12 col-md-6 col-lg-6">
                             <label class="step-no">2.</label>
-                            <p>点击这个按钮 👇👇👇，如图所示，Server 不为0就是导入成功了。</p>
+                            <p>点击这个按钮 ，如图所示，Server 不为0就是导入成功了。</p>
                             {if $malio_config['quantumult_mode'] == 'single'}
                             <a href="##" id="quan_sub" class="btn btn-icon icon-left btn-primary btn-app btn-lg btn-round copy-config"  onclick="importSublink('quantumult')"><i class="malio-quantumult"></i> 一键导入 Quantumult 配置</a>
                             {elseif $malio_config['quantumult_mode'] == 'all'}
@@ -209,7 +209,7 @@
                   </div>
                 </div>
                 <div class="text-center">
-                  <h3 style="margin-top: 50px;margin-bottom: 30px;">🤔</h3>
+                  <h3 style="margin-top: 50px;margin-bottom: 30px;"></h3>
                 </div>
                 <div class="card">
                   <div class="card-body">
@@ -248,8 +248,8 @@
 
   {include file='user/scripts.tpl'}
 
-  <script src="https://cdn.jsdelivr.net/npm/bowser@1.9.4/bowser.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/bowser@1.9.4/bowser.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
 
   <script>
     function importSublink(client) {

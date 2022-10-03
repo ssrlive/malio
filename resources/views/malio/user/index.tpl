@@ -7,7 +7,7 @@
   <title>{$i18n->get('dashboard')} &mdash; {$config["appName"]}</title>
 
   <!-- C3 chart css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/c3@0.6.8/c3.min.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/c3@0.6.8/c3.min.css">
 
   <style>
     .card-header i {
@@ -248,13 +248,13 @@
                         <h4>{$i18n->get('balance')}</h4>
                       </div>
                       <div class="card-body">
-                        ¥ <span class="counter">{$user->money}</span>
+                         <span class="counter">{$user->money}</span>
                       </div>
                       <div class="card-stats">
                         <div class="card-stats-title" style="padding-top: 0;padding-bottom: 4px;">
                           <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                              <li class="breadcrumb-item active" aria-current="page">{$i18n->get('total-aff-reward')}: ¥{$paybacks_sum}</li>
+                              <li class="breadcrumb-item active" aria-current="page">{$i18n->get('total-aff-reward')}: {$paybacks_sum}</li>
                             </ol>
                           </nav>
                         </div>
@@ -442,7 +442,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-body">
-                  <h3 class="animated tada mt-5 text-center" style="color:#191d21">👋 Hi, {$user->user_name}</h3>
+                  <h3 class="animated tada mt-5 text-center" style="color:#191d21"> Hi, {$user->user_name}</h3>
                   <h5 class="mb-5 mt-2 text-center" style="color:#191d21d5">{$i18n->get('new-user-guide-lead')}</h5>
                   <div class="row mt-4">
                     <div class="col-12 col-lg-8 offset-lg-2">
@@ -506,14 +506,14 @@
   {include file='user/scripts.tpl'}
 
   <!-- Counter Up  -->
-  <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.0/lib/jquery.waypoints.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/waypoints@4.0.0/lib/jquery.waypoints.min.js"></script>
   <script src="/theme/malio/js/jquery.counterup.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bowser@1.9.4/bowser.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/bowser@1.9.4/bowser.min.js"></script>
 
   <!-- C3 Chart -->
-  <script src="https://cdn.jsdelivr.net/npm/d3@3.5.0/d3.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/c3@0.4.10/c3.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/d3@3.5.0/d3.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/c3@0.4.10/c3.min.js"></script>
 
   <script>
     trafficDountChat(

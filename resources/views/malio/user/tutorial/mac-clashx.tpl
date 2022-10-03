@@ -147,7 +147,7 @@
                         <div class="row">
                           <div class="left-text col-xs-12 col-md-6 col-lg-6">
                             <label class="step-no">2.</label>
-                            <p>点击这个按钮 👇👇👇</p>
+                            <p>点击这个按钮 </p>
                             <a href="##" class="btn btn-icon icon-left btn-primary btn-app btn-lg btn-round" onclick="importSublink('clash')"><i class="malio-clash"></i> 一键导入托管配置到 ClashX</a>
                             <p class="text-muted" style="font-size: 13px">一键导入不成功？<a href="#manual-import" class="text-muted "><u>试试手动导入</u> →</a></p>
                           </div>
@@ -176,7 +176,7 @@
                   </div>
                 </div>
                 <div class="text-center">
-                  <h3 style="margin-top: 50px;margin-bottom: 30px;">🤔</h3>
+                  <h3 style="margin-top: 50px;margin-bottom: 30px;"></h3>
                 </div>
                 <div class="card">
                   <div class="card-body">

@@ -173,7 +173,7 @@
                         <div class="row">
                           <div class="left-text col-xs-12 col-md-6 col-lg-6">
                             <label class="step-no">2.</label>
-                            <p>点击这个按钮 👇👇👇，会自动跳转添加订阅。</p>
+                            <p>点击这个按钮 ，会自动跳转添加订阅。</p>
                             <a href="##" class="btn btn-icon icon-left btn-primary btn-app btn-lg btn-round" onclick="importSublink('shadowrocket')"><i class="malio-shadowrocket"></i> 一键导入 Shadowrocket 配置</a>
                             <button id="shadowrocket-qrcode" type="button" class="qrcode-btn btn">
                               <i class="fas fa-qrcode"></i>
@@ -223,7 +223,7 @@
                   </div>
                 </div>
                 <div class="text-center">
-                  <h3 style="margin-top: 50px;margin-bottom: 30px;">🤔</h3>
+                  <h3 style="margin-top: 50px;margin-bottom: 30px;"></h3>
                 </div>
                 <div class="card">
                   <div class="card-body">
@@ -238,7 +238,7 @@
                         <div class="col-sm-6 col-xs-12 col-md-6 col-lg-6">
                           <h6>Shadowrocket 如何更新节点？</h6>
                           <p class="mb-4 font-13">
-                            在首页找到名称为{$config['appName']}的服务器订阅，点击右边的 ⓘ ，点击右上角完成。我们建议用户打开自动更新开关，点击底部导航栏的「设置」进入设置页面，随后往下划至最底部，进入「服务器订阅」子页面。将「打开时更新」的开关 打开。
+                            在首页找到名称为{$config['appName']}的服务器订阅，点击右边的  ，点击右上角完成。我们建议用户打开自动更新开关，点击底部导航栏的「设置」进入设置页面，随后往下划至最底部，进入「服务器订阅」子页面。将「打开时更新」的开关 打开。
                           </p>
                         </div>
                       </div>
@@ -256,8 +256,8 @@
 
   {include file='user/scripts.tpl'}
 
-  <script src="https://cdn.jsdelivr.net/npm/bowser@1.9.4/bowser.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/bowser@1.9.4/bowser.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
 
   <script>
     function importSublink(client) {

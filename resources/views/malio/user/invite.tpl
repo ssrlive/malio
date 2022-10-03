@@ -32,7 +32,7 @@
                     <div class="card-icon">
                       <i class="fas fa-laugh-squint" style="color:#ffc36f"></i>
                     </div>
-                    <h4 class="mt-2">¥ {$paybacks_sum}</h4>
+                    <h4 class="mt-2"> {$paybacks_sum}</h4>
                     <div class="card-description">{$i18n->get('total-aff-reward')}</div>
                   </div>
                 </div>
@@ -94,7 +94,7 @@
                         <tr>
                           <td>{$payback->id}</td>
                           <td>{$payback->userid}</td>
-                          <td>¥ {$payback->ref_get}</td>
+                          <td> {$payback->ref_get}</td>
                         </tr>
                         {/foreach}
                         {/if}

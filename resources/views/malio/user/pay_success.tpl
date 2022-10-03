@@ -54,7 +54,7 @@
                         setTimeout('window.location.reload()', 5000);
                       </script>
                       {/if}
-                      <a href="/user/code" class="mt-4 bb">前往我的钱包 👉</a>
+                      <a href="/user/code" class="mt-4 bb">前往我的钱包 </a>
                     </div>
                   </div>
                 </div>

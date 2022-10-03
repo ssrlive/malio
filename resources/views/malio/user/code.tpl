@@ -53,7 +53,7 @@
                     <div class="card-icon">
                       <i class="fas fa-yen-sign "></i>
                     </div>
-                    <h4>¥ {$user->money}</h4>
+                    <h4> {$user->money}</h4>
                     <div class="card-description">{$i18n->get('balance')}</div>
                     <div class="mt-4">
                       <a href="##" id="top-up" class="btn btn-outline-white btn-lg btn-icon icon-left">
@@ -92,7 +92,7 @@
                           {if $code->type>=1&&$code->type<=10000} <td>等级续期 - 等级{$code->type}</td>
                             {/if}
                             {if $code->type==-1}
-                            <td>¥ {$code->number}</td>
+                            <td> {$code->number}</td>
                             {/if}
                             {if $code->type==10001}
                             <td>充值 {$code->number} GB 流量</td>
@@ -139,7 +139,7 @@
                         {foreach $shops as $shop}
                         <tr>
                           <td>{$shop->shop()->name}</td>
-                          <td>¥{$shop->price}</td>
+                          <td>{$shop->price}</td>
                           <td>{date('Y-m-d H:i:s', $shop->datetime)}</td>
                           {if $malio_config['shop_enable_autorenew'] == true}
 
@@ -200,7 +200,7 @@
                           <div class="selectric-hide-select">
                             <select class="form-control" tabindex="-1" id="amount">
                               {foreach $malio_config['topup_select_list'] as $amount}
-                              <option value="{$amount}">¥ {$amount}</option>
+                              <option value="{$amount}"> {$amount}</option>
                               {/foreach}
                             </select>
                           </div>
@@ -209,7 +209,7 @@
                         <div class="input-group">
                           <div class="input-group-prepend">
                             <div class="input-group-text">
-                              ¥
+                              
                             </div>
                           </div>
                           <input id="amount" type="number" class="form-control currency" onclick="hideFeedback('no-amount-warn')">
@@ -296,7 +296,7 @@
   </div>
 
   {include file='user/scripts.tpl'}
-  <script src="https://cdn.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/kjua@0.1.2/dist/kjua.min.js"></script>
 
   <script>
     $('#top-up').click(function () {
