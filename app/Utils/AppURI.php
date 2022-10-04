@@ -404,7 +404,7 @@ class AppURI
                         $tls .= '&allowInsecure=1';
                     }
                 }
-                $return .= ('vmess://' . base64_encode('auto:' . $item['id'] . '@' . $item['add'] . ':' . $item['port']) . '?remark=' . rawurlencode($item['remark']) . $network . $protocol . '&aid=' . $item['aid'] . $tls);
+                $return .= ('vmess://' . base64_encode('auto:' . $item['id'] . '@' . $item['add'] . ':' . $item['port']) . '?remark=' . rawurlencode($item['remark']) . $network . $protocol . '&alterId=' . $item['aid'] . $tls);
                 break;
         }
         return $return;
