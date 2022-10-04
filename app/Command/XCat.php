@@ -301,7 +301,7 @@ class XCat
     public function initQQWry()
     {
         echo ('开始下载纯真 IP 数据库....');
-        $qqwry = file_get_contents('https://qqwry.mirror.noc.one/QQWry.Dat?from=sspanel_uim');
+        $qqwry = file_get_contents('https://cdn.jsdelivr.net/gh/sspanel-uim/qqwry.dat@latest/qqwry.dat');
         if ($qqwry != '') {
             $fp = fopen(BASE_PATH . '/storage/qqwry.dat', 'wb');
             if ($fp) {
