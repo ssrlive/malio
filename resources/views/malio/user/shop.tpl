@@ -50,6 +50,11 @@
       border: 2px solid #f1f2f5;
     }
 
+    #payment-selection #wxpay {
+      color: #00b235;
+      border: 2px solid #f1f2f5;
+    }
+
     #payment-selection #qqpay {
       color: #11b7f5;
       border: 2px solid #f1f2f5;
@@ -75,6 +80,11 @@
       border: 2px solid #00b235;
     }
 
+    #payment-selection #wxpay:hover {
+      color: #00b235;
+      border: 2px solid #00b235;
+    }
+
     #payment-selection #qqpay:hover {
       color: #11b7f5;
       border: 2px solid #11b7f5;
@@ -92,6 +102,12 @@
     }
 
     #payment-selection #wechat[class*="active"] {
+      background: #00b235 !important;
+      box-shadow: 0 2px 6px #00b23570;
+      border: 2px solid #00b235 !important;
+    }
+
+    #payment-selection #wxpay[class*="active"] {
       background: #00b235 !important;
       box-shadow: 0 2px 6px #00b23570;
       border: 2px solid #00b235 !important;
@@ -268,9 +284,9 @@
                   </div>
                 </div>
 
-                <div class="row mt-4" id="time-selection">
+                <div class="row mt-4" id="time-selection" hidden="hidden" >
                   <div class="col-12">
-                    <div class="section-title">{$i18n->get('choose-plan-time')}</div>
+                    <div class="section-title" >{$i18n->get('choose-plan-time')}</div>
                     <div class="colors">
                       <div id="1month" class="color col-12 col-md-2 col-lg-2 active" onclick="selectItem('time','1month')">
                         {$i18n->get('1-month')}
@@ -312,8 +328,13 @@
                         <div id="alipay" class="color col-12 col-md-2 col-lg-2 active" onclick="selectItem('payment','alipay')">
                           <i class="fab fa-alipay" style="font-size: 1.1rem;vertical-align: -1px;margin-right: 2px;"></i> {$i18n->get('alipay')}
                         </div>
-                        {if $config['payment_system'] != 'f2fpay' && $config['payment_system'] != 'spay' && $config['payment_system'] != 'payssion'}
+                        {if $config['payment_system'] != 'f2fpay' && $config['payment_system'] != 'spay' && $config['payment_system'] != 'payssion'&& $config['payment_system'] != 'paybeaver' }
                         <div id="wechat" class="color col-12 col-md-2 col-lg-2" onclick="selectItem('payment','wechat')">
+                          <i class="malio-wechat-pay" style="font-size: 1.1rem;vertical-align: -1px;"></i> {$i18n->get('wechat-pay')}
+                        </div>
+                        {/if}
+                        {if $config['payment_system'] == 'paybeaver'}
+                        <div id="wxpay" class="color col-12 col-md-2 col-lg-2" onclick="selectItem('payment','wxpay')">
                           <i class="malio-wechat-pay" style="font-size: 1.1rem;vertical-align: -1px;"></i> {$i18n->get('wechat-pay')}
                         </div>
                         {/if}
@@ -322,7 +343,8 @@
                           <i class="fab fa-btc"></i> {$i18n->get('cryptocurrency')}
                         </div>
                         {/if}
-                        {if $config['payment_system'] == 'codepay' || $config['payment_system'] == 'flyfoxpay'}
+
+                        {if $config['payment_system'] == 'codepay' && $config['payment_system'] != 'paybeaver' }
                         <div id="qqpay" class="color col-12 col-md-2 col-lg-2" onclick="selectItem('payment','qqpay')">
                           <i class="fab fa-qq"></i> {$i18n->get('qq-wallet')}
                         </div>
@@ -393,7 +415,7 @@
             </div>
           </div>
       </div>
-      
+
       {elseif $malio_config['shop_style'] == 'legacy'}
       <div id="main-page" class="main-content">
         <section class="section">
@@ -458,7 +480,7 @@
                     </div>
                   </div>
                   <div class="pricing-cta">
-                    <a href="##" data-toggle="modal" data-target="#legacy-modal-1" onclick="legacySelect({$shop->id})">{$i18n->get('purchase')} <i class="fas fa-arrow-right"></i></a>
+                    <a href="##" data-toggle="modal" data-target="#legacy-modal-1" onclick="legacySelect({$shop->id})">选择更多 <i class="fas fa-arrow-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -523,6 +545,24 @@
       </div>
       <div class="modal-footer bg-whitesmoke br">
         <a id="to-bitpayx" href="##" target="blank" class="btn btn-primary">{$i18n->get('continue-pay')}</a>
+      </div>
+    </div>
+  </div>
+</div>
+{/if}
+
+{if $config['payment_system'] == 'Jshipay'}
+<div class="modal fade" tabindex="-1" role="dialog" id="Jshipay-modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{$i18n->get('payment')}</h5>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center">{$i18n->get('pay-now-modal-text')}</div>
+      </div>
+      <div class="modal-footer bg-whitesmoke br">
+        <a id="to-Jshipay" href="##" type="button" target="blank" class="btn btn-primary">{$i18n->get('continue-pay')}</a>
       </div>
     </div>
   </div>
@@ -651,7 +691,7 @@
 </div>
 {/if}
 
-{if $config['payment_system'] == 'flyfoxpay'}
+{if $config['payment_system'] == 'paybeaver'}
 <div class="modal fade" tabindex="-1" role="dialog" id="flyfox-modal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -806,6 +846,41 @@
     </div>
   </div>
 </div>
+{/if}
+
+{if $config['payment_system'] == 'paybeaver'}
+<div class="modal fade" tabindex="-1" role="dialog" id="paybeaver-modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">支付</h5>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center">
+          点击“继续支付”打开支付页面支付<br>
+          支付到账需要一段时间，请勿关闭或刷新此页面</div>
+      </div>
+      <div class="modal-footer bg-whitesmoke br">
+        <a id="to-paybeaver" href="##" type="button" target="blank" class="btn btn-primary">继续支付</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$('#pay-confirm').click(() => {
+  $.post('/user/payment/purchase', {
+    amount: $('#pay-amount').text().split(' ')[1]
+  }, (data) => {
+    data = JSON.parse(data)
+    if (data.code !== 0) {
+      alert(data.msg)
+      return
+    }
+    $('#to-paybeaver').attr('href', data.url)
+    $('#paybeaver-modal').modal();
+  })
+})
+</script>
 {/if}
 
 </body>
