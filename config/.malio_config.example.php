@@ -261,6 +261,13 @@ $Malio_Config['enable_faq'] = true;    // 是否显示 FAQ 常见问题页面
 $Malio_Config['enable_windows_gaming_tutorial'] = true;    // 是否启用 Windows 游戏教程 （netch教程）
 
 
+####### 自建链接 #######
+$Malio_Config['ios_apple_link'] = '链接';   //  获取apple ID 账号链接
+$Malio_Config['invite_link_1'] = '链接';   //  邀请链接1
+$Malio_Config['invite_link_2'] = '链接';   //  邀请链接2
+$Malio_Config['invite_link_3'] = '链接';   //  邀请链接3
+
+
 ####### 着陆页设置 #######
 // 着陆页文本可以在 .i18n.php 更改
 $Malio_Config['index_enable_promotion'] = true;   // 着陆页是否显示促销活动提示

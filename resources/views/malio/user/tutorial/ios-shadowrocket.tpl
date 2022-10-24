@@ -148,8 +148,7 @@
                                 为了保护您的隐私，请勿在手机设置里直接登录，仅在 App Store 登录即可。
                               </p>
                               {if $user->class>0}
-                              <p>Apple ID：<a class="copy-text" data-clipboard-text="{$malio_config['ios_apple_id']}" href="##">{$malio_config['ios_apple_id']}</a><br>
-                                密码：<a class="copy-text" data-clipboard-text="{$malio_config['ios_apple_id_password']}" href="##">********(点击复制)</a></p>
+                              <font size="5" face="arial" color="red">获取apple-ID：<a href="{$malio_config['ios_apple_link']}" target="_blank" rel="noopener noreferrer">{$malio_config['ios_apple_link']}</a>.</font></p>
                               {else}
                               <p>购买会员计划后，刷新本页即可看到免费提供的 Apple ID。</p>
                               {/if}

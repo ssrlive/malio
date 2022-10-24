@@ -50,7 +50,10 @@
                     <p class="lead">{$i18n->get('aff-card-content-3',[$config["invite_get_money"]])}</p>
                     {/if}
                     <div class="mt-4">
-                      <a href="##" data-clipboard-text="{$config["baseUrl"]}/auth/register?code={$code->code}" class="btn btn-outline-white btn-lg btn-round btn-icon icon-left copy-text"><i class="far fa-copy"></i> {$i18n->get('copy-inivtation-link')}</a>
+                      <a href="##" data-clipboard-text="{$malio_config['invite_link_1']}/auth/register?code={$code->code}" class="btn btn-outline-white btn-lg btn-round btn-icon icon-left copy-text"><i class="far fa-copy"></i> {$i18n->get('copy-inivtation-link')}</a>
+                      <a href="##" data-clipboard-text="{$malio_config['invite_link_2']}/auth/register?code={$code->code}" class="btn btn-outline-white btn-lg btn-round btn-icon icon-left copy-text"><i class="far fa-copy"></i> {$i18n->get('copy-inivtation-link-2')}</a>
+                      <a href="##" data-clipboard-text="{$malio_config['invite_link_3']}/auth/register?code={$code->code}" class="btn btn-outline-white btn-lg btn-round btn-icon icon-left copy-text"><i class="far fa-copy"></i> {$i18n->get('copy-inivtation-link-3')}</a>
+                      <a href="##" data-clipboard-text="{$code->code}" class="btn btn-outline-white btn-lg btn-round btn-icon icon-left copy-text"><i class="far fa-copy"></i> {$i18n->get('copy-inivtation-link-1')}</a>
                       {if $user->invite_num >= 0}<div class="mt-2 ml-2" style="font-size: 0.8em;color: rgba(255, 255, 255, 0.486)">{$i18n->get('chances-of-invitation-left',[$user->invite_num])}</div>{/if}
                     </div>
                   </div>

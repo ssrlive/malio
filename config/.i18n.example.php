@@ -1432,9 +1432,21 @@ $I18N['aff-card-content-3'] = array(
     'en' => 'and your friend will get a <b>10 CNY</b> reward',
     'zh-cn' => 'TA将获得 <b>1</b> 元奖励作为初始资金'
 );
+$I18N['copy-inivtation-link-1'] = array(
+    'en' => ' Copy Inivtation code',
+    'zh-cn' => '复制邀请码'
+);
 $I18N['copy-inivtation-link'] = array(
-    'en' => ' Copy Inivtation Link',
-    'zh-cn' => '复制邀请链接'
+    'en' => ' Inivtation Link-1',
+    'zh-cn' => '免翻邀请-1'
+);
+$I18N['copy-inivtation-link-2'] = array(
+    'en' => ' Inivtation Link-2',
+    'zh-cn' => '免翻邀请-2'
+);
+$I18N['copy-inivtation-link-3'] = array(
+    'en' => ' Inivtation Link-3',
+    'zh-cn' => '免翻邀请-3'
 );
 $I18N['chances-of-invitation-left'] = array(
     'en' => '$1 Chances of Invitation Left',
