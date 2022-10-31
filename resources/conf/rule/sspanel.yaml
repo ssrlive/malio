@@ -1,6 +1,9 @@
   - DOMAIN-SUFFIX,smtp,DIRECT
   - DOMAIN-KEYWORD,aria2,DIRECT
 
+  - DOMAIN-SUFFIX,translate.google.com,🔰国外流量
+  - DOMAIN-SUFFIX,translate.googleapis.com,🔰国外流量
+  - DOMAIN-SUFFIX,apkpure.com,🔰国外流量
   - DOMAIN-SUFFIX,ampproject.org,🔰国外流量
   - DOMAIN-SUFFIX,appspot.com,🔰国外流量
   - DOMAIN-SUFFIX,blogger.com,🔰国外流量

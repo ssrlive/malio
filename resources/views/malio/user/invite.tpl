@@ -37,8 +37,11 @@
                   </div>
                 </div>
 
-                <div class="hero text-white hero-bg-image hero-bg-parallax mb-4" data-background="/theme/malio/img/soroush-karimi-crjPrExvShc-unsplash.jpg" style="background-image: url(&quot;/theme/malio/img/soroush-karimi-crjPrExvShc-unsplash.jpg&quot;);">
-                  <div class="hero-inner">
+                <div class="card card-hero">
+                  <div class="card-header hero text-white mb-4" style="border-radius: 3px;box-shadow: 0 2px 6px #acb5f6;border: none;">
+                    <div class="card-icon">
+                      <i class="fas fa-yen-sign "></i>
+                    </div>
                     <h2>{$i18n->get('aff-card-title')}</h2>
                     {if $config['code_payback'] > 0}
                     <p class="lead">{$i18n->get('aff-card-content-1',[$config["code_payback"]])}</p>
